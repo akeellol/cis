@@ -57,7 +57,7 @@ public class Main {
 			public void actionPerformed(ActionEvent e) {
 				
 				frame.dispose();
-				DetailsScreen as = new DetailsScreen();
+				Sign_up as = new Sign_up();
 				as.setVisible(true);
 				
 				
