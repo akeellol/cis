@@ -34,6 +34,7 @@ public class Scoreboard extends JFrame {
 	private JButton btnNewButton;
 	private JTable table_1;
 	private JScrollPane scrollPane;
+	private JButton btnNewButton_1;
 
 	/**
 	 * Launch the application.
@@ -82,16 +83,34 @@ public class Scoreboard extends JFrame {
 		});
 		btnNewButton.setBackground(new Color(204, 0, 0));
 		btnNewButton.setFont(new Font("SansSerif", Font.BOLD, 14));
+		
+		btnNewButton_1 = new JButton("REGISTER");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				dispose();
+				Sign_up reg = new Sign_up();
+				reg.setVisible(true);
+				
+				
+				
+			}
+		});
+		btnNewButton_1.setForeground(Color.WHITE);
+		btnNewButton_1.setFont(new Font("SansSerif", Font.BOLD, 14));
+		btnNewButton_1.setBackground(new Color(204, 0, 0));
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addContainerGap(48, Short.MAX_VALUE)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING, false)
 						.addGroup(gl_contentPane.createSequentialGroup()
 							.addComponent(panel, GroupLayout.PREFERRED_SIZE, 501, GroupLayout.PREFERRED_SIZE)
 							.addGap(32))
 						.addGroup(gl_contentPane.createSequentialGroup()
+							.addComponent(btnNewButton_1, GroupLayout.PREFERRED_SIZE, 115, GroupLayout.PREFERRED_SIZE)
+							.addPreferredGap(ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 							.addComponent(lblNewLabel, GroupLayout.PREFERRED_SIZE, 150, GroupLayout.PREFERRED_SIZE)
 							.addGap(89)
 							.addComponent(btnNewButton, GroupLayout.PREFERRED_SIZE, 115, GroupLayout.PREFERRED_SIZE)
@@ -103,7 +122,8 @@ public class Scoreboard extends JFrame {
 					.addContainerGap()
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
 						.addComponent(lblNewLabel, GroupLayout.PREFERRED_SIZE, 47, GroupLayout.PREFERRED_SIZE)
-						.addComponent(btnNewButton, GroupLayout.PREFERRED_SIZE, 35, GroupLayout.PREFERRED_SIZE))
+						.addComponent(btnNewButton, GroupLayout.PREFERRED_SIZE, 35, GroupLayout.PREFERRED_SIZE)
+						.addComponent(btnNewButton_1, GroupLayout.PREFERRED_SIZE, 35, GroupLayout.PREFERRED_SIZE))
 					.addGap(28)
 					.addComponent(panel, GroupLayout.PREFERRED_SIZE, 166, GroupLayout.PREFERRED_SIZE)
 					.addContainerGap())
@@ -162,6 +182,4 @@ public class Scoreboard extends JFrame {
 		return map;
 		
 	}
-	
-	
 }

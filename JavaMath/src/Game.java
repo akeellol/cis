@@ -265,8 +265,11 @@ public class Game extends JFrame {
 						 * count=0; score =0; lblScore.setText(""); randomNum = r.nextInt(100);
 						 * lblNumber.setText(String.valueOf(randomNum));
 						 */
+		           
+		           
 		          
 		          dispose();
+		     
 		           
 		           AdvancedLevel.main(null);
 		           
